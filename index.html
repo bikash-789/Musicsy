@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>HTML</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <h1>Musicsy</h1>
+    <div class="first_page flex-column">
+      <div class="bg" id="bg">
+        <div class="container flex-column">
+          <img src="" class="album-art" id="album-art" />
+
+          <br />
+          <br />
+          <div id="title_music">
+            <span id="title"></span>
+          </div>
+          <br />
+
+          <div class="seeker flex-column" id="seeker">
+            <div class="progress flex-row">
+              <div id="current_time">00:00</div>
+              <div id="duration">00:00</div>
+            </div>
+            <br />
+
+            <!-- <div class="progress_bar_div">
+              <div class="progress_bar" id="progress_bar"></div>
+            </div> -->
+          </div>
+          <input
+            type="range"
+            onchange="showSeekedPos()"
+            id="seek"
+            value="10"
+            max=""
+          />
+          <div class="controller flex-row">
+            <audio id="music">
+              <source src="" type="audio/mpeg" id="source" />
+            </audio>
+            <div class="buttons pos" onclick="previous()">⟨</div>
+            <div class="buttons" id="play" onclick="play()">▶︎</div>
+            <div class="buttons pos" onclick="next()">⟩</div>
+          </div>
+        </div>
+      </div>
+      <br />
+
+      <h3 id="heading" onclick="show()">Upcoming</h3>
+      <div id="upcoming">
+        <div id="list_of_upcom">
+          <ul id="list" type="circle"></ul>
+        </div>
+      </div>
+      <br />
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
